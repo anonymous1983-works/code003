@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html ng-app="actApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ACampagneTest</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <link href="assets/dist/css/style.css" rel="stylesheet" type=" text/css">
+</head>
+<body ng-controller="DefaultController" ng-init="toggleSidebarTags = 'show-sidebar-tag'" ng-class="toggleSidebarTags">
+
+<div id="act" class="app">
+    <section id="page-header" class="header page-header">
+        <div class="header-left">
+            <div class="nav">
+                <a href="" class="fa fa-navicon"></a>
+            </div>
+            <h1 class="title"><img src="assets/img/commmon/digicode.logo.svg" class="logo" alt="Digioce"></h1>
+        </div>
+        <div class="header-search">
+            <form class="search-global ng-pristine ng-valid">
+                <input type="text" class="form-control input">
+                <i class="btn search fa fa-search"></i>
+                <input type="submit" class="form-control btn submit">
+            </form>
+        </div>
+        <div class="header-right">
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li class="alert"><a href="" class="fa fa-plus"></a></li>
+                    <li class="alert"><a href="" class="fa fa-bell-o"></a></li>
+                    <li class="user">
+                        <a href="">Alexandre Bury<i class="fa fa-angle-down"></i></a>
+
+                        <div class="sub-nav">
+                            <ul>
+                                <li><a href="" class=""><i class="fa fa-cog"></i>Setting</a></li>
+                                <li><a href="" class=""><i class="fa fa-power-off"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <section id="page-container" class="page-container">
+        <!-- Begin Page Container Left -->
+        <section class="page-container-left"></section>
+        <!-- End Page Container Left -->
+        <!-- Begin Page Container Right -->
+        <section class="page-container-right">
+            <!-- Begin Page Container Right -->
+            <section class="page-container-right">
+                <section id="page-sub-header-right" class="page-sub-header-right global-tags">
+                    <header class="header">
+                        <a class="title" ng-click="toggleSidebarTags= (toggleSidebarTags == 'show-sidebar-tag')? 'hide-sidebar-tag': 'show-sidebar-tag';"><i class="fa fa-tags"></i>Tags</a>
+                    </header>
+                    <div class="body">
+                        <div class="scroll-wrapper">
+                            <ul>
+                                <li ng-repeat="tag in mocks.tags"><a class="link">{{tag.keyword}}<span class="count">({{tag.count}})</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!-- End Page Container Right -->
+            <!-- Begin Page Container Left -->
+            <!--
+              -- BODY --
+              -->
+            <section class="page-container-left">
+
+                <!-- Begin Page Sub Header Left -->
+                <section id="page-sub-header-left" class="page-sub-header-left global-filter clearfix">
+                    <div class="filter-group btn-group">
+
+                        <div class="title">
+                            List of projects
+                        </div>
+
+                        <div class="content">
+
+                            <input type="radio" name="options-filter" id="option-filter-all" value="all" checked>
+                            <label class="btn active" for="option-filter-all">All</label>
+
+                            <input type="radio" name="options-filter" id="option-filter-application" value="progress">
+                            <label class="btn" for="option-filter-application">Application</label>
+
+                            <input type="radio" name="options-filter" id="option-filter-library">
+                            <label class="btn" for="option-filter-library">Library</label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="filter-show btn-group">
+                        <input type="radio" name="options-display" id="option-display-grid" value="all" checked>
+                        <label class="btn active" for="option-display-grid"><i class="fa fa-th"></i></i></label>
+
+                        <input type="radio" name="options-display" id="option-display-list" value="progress">
+                        <label class="btn" for="option-display-list"><i class="fa fa-list"></i></label>
+                    </div>
+                </section>
+
+                <section id="page-project-container" class="page-project-container">
+                    <div class="project-list clearfix">
+                        <div class="project clearfix">
+                            <header class="header">
+                                <div class="image circular" style="background-image: url(assets/img/project/icon.png)"></div>
+                                <div class="title">
+                                    Digicode
+                                </div>
+                            </header>
+                            <div class="body">
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+            <!--
+              -- END BODY --
+              -->
+            <!-- End Page Container Left -->
+        </section>
+        <!-- End Page Container Right -->
+        <div class="wrap">
+
+
+
+
+        </div>
+        <div class="wrap">
+            <div class="campaign-list clearfix">
+                <am-campaign ng-repeat="source in dashboard.sources" parameters="source"></am-campaign>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="idx"></div>
+
+<script src="assets/bower_components/angular/angular.min.js"></script>
+<script src="assets/bower_components/d3/d3.min.js"></script>
+<script src="assets/dist/js/script.js"></script>
+</body>
+</html>

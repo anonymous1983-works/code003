@@ -1,0 +1,533 @@
+html,
+body {
+  border: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+:focus {
+  outline: 0;
+}
+.display-none {
+  display: none;
+}
+.circular {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix {
+  zoom: 1;
+}
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+.page-container > .page-container-left {
+  float: left;
+}
+.page-container > .page-container-right {
+  overflow: hidden;
+}
+.page-container > .page-container-right > .page-container-left {
+  overflow: hidden;
+}
+.page-container > .page-container-right > .page-container-right {
+  float: right;
+}
+.page-sub-header-left {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #10cfbd;
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  min-height: 38px;
+}
+.page-sub-header-right .header {
+  line-height: 38px;
+  background-color: #e3e3e3;
+}
+.page-sub-header-right .body {
+  background-color: #fafafa;
+}
+.page-project-container {
+  padding: 10px 20px 20px;
+}
+/** Header
+ ************************************************** */
+#page-header {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 60px;
+  background: #272b35;
+  padding: 12px 20px;
+  line-height: 36px;
+}
+#page-header * {
+  color: #FFFFFF;
+}
+#page-header .header-left {
+  float: left;
+}
+#page-header .header-left .nav {
+  float: left;
+}
+#page-header .header-left .title {
+  float: left;
+  line-height: 16px;
+  padding: 0 0 0 10px;
+  font-weight: 400;
+}
+#page-header .header-left .title span {
+  color: #48b0f7;
+}
+#page-header .header-left .title .logo {
+  height: 36px;
+  padding: 5px;
+}
+#page-header .header-right {
+  float: right;
+}
+#page-header .header-right .nav {
+  padding: 10px 0;
+}
+#page-header .header-right .nav ul li {
+  float: left;
+  border-left: 1px solid #383d49;
+  position: relative;
+}
+#page-header .header-right .nav ul li a {
+  padding: 0 10px;
+  line-height: 16px;
+  display: block;
+  font-size: 14px;
+}
+#page-header .header-right .nav ul li a .fa {
+  margin-left: 5px;
+}
+#page-header .header-right .nav ul li .sub-nav {
+  position: absolute;
+  z-index: 90;
+  top: 16px;
+  right: 0;
+  width: 170px;
+  padding-top: 22px;
+  display: none;
+}
+#page-header .header-right .nav ul li .sub-nav:before {
+  position: absolute;
+  top: 16px;
+  right: 10%;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #2c2d30;
+  border-left: 6px solid transparent;
+  content: '';
+}
+#page-header .header-right .nav ul li .sub-nav ul {
+  background: #2c2d30;
+  -webkit-box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.5);
+}
+#page-header .header-right .nav ul li .sub-nav ul li {
+  float: none;
+  display: block;
+  border: none;
+}
+#page-header .header-right .nav ul li .sub-nav ul li a {
+  display: block;
+  line-height: 32px;
+}
+#page-header .header-right .nav ul li .sub-nav ul li a i {
+  margin: 0 10px 0 0;
+}
+#page-header .header-right .nav ul li .sub-nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+#page-header .header-right .nav ul li:hover .sub-nav {
+  display: block;
+}
+#page-header .header-search {
+  float: left;
+  width: 40%;
+  margin: 0 0 0 40px;
+  position: relative;
+}
+#page-header .header-search .search-global {
+  border-bottom: 1px solid #383d49;
+}
+#page-header .header-search .search-global .form-control {
+  background: transparent;
+  border: 0;
+  font-weight: 300;
+  width: 100%;
+}
+#page-header .header-search .search-global .form-control:focus + .btn.search {
+  color: #cccccc;
+}
+#page-header .header-search .search-global .btn.submit {
+  display: none;
+}
+#page-header .header-search .search-global .btn.search {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -8px;
+  color: #383d49;
+}
+/* ** End Header ** */
+.global-filter li,
+.global-filter .btn-group {
+  float: left;
+}
+.global-filter li.filter-show,
+.global-filter .btn-group.filter-show {
+  float: right;
+}
+.global-filter li a,
+.global-filter .btn-group a,
+.global-filter li .btn,
+.global-filter .btn-group .btn {
+  padding: 0 15px;
+  line-height: 38px;
+  color: #FFFFFF;
+  display: block;
+  float: left;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.global-filter li input[type="radio"],
+.global-filter .btn-group input[type="radio"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.global-filter li input[type="radio"] + label,
+.global-filter .btn-group input[type="radio"] + label {
+  cursor: pointer;
+}
+.global-filter li input[type="radio"]:checked + label,
+.global-filter .btn-group input[type="radio"]:checked + label {
+  color: #0a7c71;
+}
+.global-filter li.filter-group .title,
+.global-filter .btn-group.filter-group .title,
+.global-filter li.filter-group .content,
+.global-filter .btn-group.filter-group .content {
+  float: left;
+}
+.global-filter li.filter-group .title,
+.global-filter .btn-group.filter-group .title {
+  padding: 0 10px;
+  margin: 0;
+  line-height: 36px;
+  display: none;
+}
+.global-filter li.filter-group input[type="radio"]:checked + label,
+.global-filter .btn-group.filter-group input[type="radio"]:checked + label {
+  background: #FFFFFF;
+  color: #0a7c71;
+}
+.global-filter li.filter-group input[type="radio"]:checked + label:after,
+.global-filter .btn-group.filter-group input[type="radio"]:checked + label:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  border: 2px solid #0a7c71;
+}
+.global-filter li.filter-search,
+.global-filter .btn-group.filter-search,
+.global-filter li.filter-application,
+.global-filter .btn-group.filter-application {
+  float: right;
+}
+.global-filter .filter-application {
+  position: relative;
+}
+.global-filter .filter-application .drop-down-menu {
+  position: absolute;
+  top: 37px;
+  right: -1px;
+  background: #FFFFFF;
+  z-index: 100;
+  display: none;
+  min-width: 200px;
+  border: 1px solid #c4c7cc;
+  border-top: 0;
+}
+.global-filter .filter-application .drop-down-menu li {
+  float: none;
+  display: block;
+}
+.global-filter .filter-application .drop-down-menu li a {
+  display: block;
+  border: none;
+  float: none;
+}
+.global-filter .filter-application:hover .drop-down-toggle:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  border: 1px solid #FFFFFF;
+}
+.global-filter .filter-application:hover .drop-down-menu {
+  display: block;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+.show-sidebar-tag .page-container-right .page-container-right {
+  width: 220px;
+  -webkit-transition: all 0.22s linear;
+  -moz-transition: all 0.22s linear;
+  -o-transition: all 0.22s linear;
+  transition: all 0.22s linear;
+}
+.hide-sidebar-tag .page-container-right .page-container-right {
+  width: 0px;
+  -webkit-transition: all 0.22s linear;
+  -moz-transition: all 0.22s linear;
+  -o-transition: all 0.22s linear;
+  transition: all 0.22s linear;
+}
+.hide-sidebar-tag .page-container-right .page-container-left {
+  padding-right: 35px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.global-tags {
+  width: 220px;
+}
+.global-tags .header {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3b4752;
+  font-size: 14px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.hide-sidebar-tag .global-tags .header {
+  margin-left: -35px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.global-tags .header .fa {
+  color: #fe4472;
+  margin-right: 10px;
+}
+.global-tags .body ul li {
+  line-height: 20px;
+  border-bottom: 1px solid #f1f1f1;
+  margin: 0 20px;
+}
+.global-tags .body ul li a {
+  display: block;
+  padding: 5px 0;
+  color: #626262;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.global-tags .body ul li a .count {
+  color: #fe4472;
+  margin-left: 6px;
+}
+.project-list .project {
+  float: left;
+  width: 200px;
+  height: 230px;
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+}
+.project-list .project .header {
+  height: 144px;
+  background-color: #d4f6f3;
+}
+.project-list .project .header .image {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+body {
+  color: #303133;
+  background: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+body a {
+  text-decoration: none;
+  display: block;
+}
+body a:hover,
+body a:active {
+  text-decoration: none;
+}
+body .page-container {
+  padding: 0;
+  margin: 0;
+}

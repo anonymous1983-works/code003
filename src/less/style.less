@@ -1,0 +1,27 @@
+@import "import/reset";
+@import "import/variables";
+@import "import/util";
+@import "import/layout";
+@import "import/theme";
+@import "import/include/header";
+@import "import/include/filter";
+@import "import/include/sidebar-tags";
+@import "import/include/project";
+
+body {
+  color: @base-color-master;
+  background: #FFFFFF;
+  font-family: @base-font-family;
+  font-weight: @base-font-weight-light;
+  a {
+    text-decoration: none;
+    display: block;
+    &:hover, &:active {
+      text-decoration: none;
+    }
+  }
+  .page-container {
+    padding: 0;
+    margin: 0;
+  }
+}
