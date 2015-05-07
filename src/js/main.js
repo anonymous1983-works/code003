@@ -3,4 +3,6 @@
  * Created by abid on 27/04/2015.
  */
 
-var actApp = angular.module('actApp', []);
+var actApp = angular.module('actApp', [
+  '720kb.tooltips'
+]);

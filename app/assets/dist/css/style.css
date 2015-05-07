@@ -196,8 +196,8 @@ ol {
 .page-sub-header-right .body {
   background-color: #fafafa;
 }
-.page-project-container {
-  padding: 10px 20px 20px;
+.page-collection-container {
+  padding: 0 0 20px;
 }
 /** Header
  ************************************************** */
@@ -492,26 +492,78 @@ ol {
   color: #fe4472;
   margin-left: 6px;
 }
-.project-list .project {
+.collection-list .collection {
   float: left;
-  width: 200px;
-  height: 230px;
+  width: 220px;
+  height: 240px;
   background-color: #f1f1f1;
+  margin: 0 10px 20px 10px;
   -webkit-box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
 }
-.project-list .project .header {
-  height: 144px;
+.collection-list .collection .header {
+  height: 120px;
   background-color: #d4f6f3;
+  padding: 10px;
 }
-.project-list .project .header .image {
-  width: 80px;
-  height: 80px;
-  margin: 10px auto;
+.collection-list .collection .header .image {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
   background-position: 50% 50%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.collection-list .collection .header .title {
+  text-align: center;
+  font-weight: 400;
+  padding: 5px 0;
+  color: #FFFFFF;
+  font-size: 14px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.collection-list .collection .body {
+  margin: 10px 10px 20px 10px;
+  font-size: 13px;
+  height: 60px;
+  overflow: hidden;
+}
+.collection-list .collection .body .content {
+  overflow: hidden;
+}
+.collection-list .collection .meta {
+  padding: 0 7px;
+  margin: 0 7px;
+  color: #777;
+  height: 30px;
+  line-height: 30px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.collection-list .collection .meta li {
+  float: left;
+  line-height: 14px;
+  text-align: center;
+  font-size: 10px;
+  margin-right: 5px;
+  color: #626262;
+}
+.collection-list .collection .meta li.right {
+  float: right;
+}
+.collection-list .collection .meta li .fa {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+}
+.collection-list .collection .meta li span {
+  display: block;
 }
 body {
   color: #303133;
